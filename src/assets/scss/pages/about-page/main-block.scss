@@ -1,47 +1,43 @@
-.about-page-main-block {
-}
-
-.about-page-main-block {
-    // .about-page-main-block__container
-
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 24.63%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%), url('/images/about-page/bg-main.jpg'),
-        rgb(0, 0, 0);
-    &__subtitle {
-        font-family: 'Manrope', sans-serif;
-        text-transform: uppercase;
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 52px;
-    }
-    &__container {
-        position: relative;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
+.about-page {
+    .main-block {
+        // .about-page-main-block__container
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 24.63%),
+            linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%),
+            rgb(0, 0, 0)
+                image-set(
+                    url('/images/about-page/bg-main.jpg') 1x,
+                    url('/images/about-page/bg-main@2x.jpg') 2x,
+                    url('/images/main/bg-main@3x.jpg') 3x
+                );
         background-repeat: no-repeat;
         background-size: cover;
-        @include responsive-clamp(padding-bottom, 110px, 140px);
-    }
+        background-position: center center;
+        background-position: center center;
+        &__subtitle {
+            font-family: 'Manrope', sans-serif;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 52px;
+        }
 
-    // .about-page-main-block__title
+        // .about-page-main-block__title
 
-    &__title {
-        max-width: 70%;
-        color: rgb(255, 255, 255);
-        font-family: Brewery;
-        font-size: clamp(45px, 5vw, 140px);
-        @include responsive-clamp(font-size, 45px, 140px);
-        font-weight: 400;
-        line-height: clamp(55px, 6vw, 140px);
-        letter-spacing: 0%;
-        text-align: center;
-    }
+        &__title {
+            max-width: 70%;
+            color: rgb(255, 255, 255);
+            font-family: Brewery;
+            font-size: clamp(45px, 5vw, 140px);
+            @include responsive-clamp(font-size, 45px, 140px);
+            font-weight: 400;
+            line-height: clamp(55px, 6vw, 140px);
+            letter-spacing: 0%;
+            text-align: center;
+        }
 
-    // .about-page-main-block__arrow
+        // .about-page-main-block__arrow
 
-    &__arrow {
+        &__arrow {
+        }
     }
 }
