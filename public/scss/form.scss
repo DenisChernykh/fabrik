@@ -1,5 +1,5 @@
 .form {
-    background: url('/src/assets/images/main/form-background.jpg');
+    background: url('/images/main/form-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -12,13 +12,13 @@
         position: absolute;
         width: 313px;
         height: 135px;
-        background-image: url('/src/assets/images/main/form/Subtract.png');
+        background-image: url('/images/main/form/Subtract.png');
         top: 0;
         left: 50%;
         transform: translateX(-50%);
         @media (max-width: 768px) {
             height: 65px;
-            background-image: url('/src/assets/images/main/form/Subtract-low.png');
+            background-image: url('/images/main/form/Subtract-low.png');
         }
     }
 
