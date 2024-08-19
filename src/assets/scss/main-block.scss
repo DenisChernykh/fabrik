@@ -6,9 +6,9 @@
             linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%),
             rgb(0, 0, 0)
                 image-set(
-                    url('/images/main/bg-main.jpg') 1x,
-                    url('/images/main/bg-main@2x.jpg') 2x,
-                    url('/images/main/bg-main@3x.jpg') 3x
+                    url('images/main/bg-main.jpg') 1x,
+                    url('images/main/bg-main@2x.jpg') 2x,
+                    url('images/main/bg-main@3x.jpg') 3x
                 );
         background-repeat: no-repeat;
         background-size: cover;

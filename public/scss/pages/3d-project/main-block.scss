@@ -3,9 +3,9 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 24.63%),
             linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%),
             image-set(
-                url('/images/3d-project/bg-main.jpg') 1x,
-                url('/images/3d-project/bg-main@2x.jpg') 2x,
-                url('/images/3d-project/bg-main@3x.jpg') 3x
+                url('images/3d-project/bg-main.jpg') 1x,
+                url('images/3d-project/bg-main@2x.jpg') 2x,
+                url('images/3d-project/bg-main@3x.jpg') 3x
             ),
             rgb(0, 0, 0);
         background-repeat: no-repeat;
