@@ -1,6 +1,0 @@
-.contacts-page {
-    .main-block {
-        @include responsive-clamp(padding-top, 60px, 120px);
-        @include responsive-clamp(margin-bottom, 20px, 140px);
-    }
-}
