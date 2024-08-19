@@ -33,6 +33,7 @@
     // .main-block__container
 
     &__container {
+        @include responsive-clamp(padding-bottom, 20px, 120px);
         position: relative;
         min-height: 100vh;
         display: flex;
@@ -82,7 +83,6 @@
     }
 }
 .main-block__container:has(.main-block__arrow) {
-    @include responsive-clamp(padding-bottom, 20px, 120px);
 }
 .main-block__container:has(.main-block__arrow) .main-block__title {
     @include responsive-clamp(margin-bottom, 23px, 60px);
