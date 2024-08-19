@@ -1,0 +1,3 @@
+.map {
+    @include responsive-clamp(margin-bottom, 60px, 72px);
+}

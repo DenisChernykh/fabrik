@@ -1,0 +1,124 @@
+.service-advantages {
+    @include responsive-clamp(margin-bottom, 60px, 221px);
+    &__title {
+        @include responsive-clamp(margin-bottom, 40px, 130px);
+    }
+
+    // .service-advantages__container
+    &__container {
+        // Пустой блок, если не используется
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__link {
+        background-color: white;
+        color: black;
+        padding: 18px 32px;
+        border-radius: 60px;
+    }
+    &__item {
+        &--images {
+            flex-basis: calc(771.5 / 1840 * 100%);
+        }
+        &--list {
+            flex-basis: 50%;
+        }
+    }
+
+    &__image {
+        width: calc(627 / 771.5 * 100%);
+        // padding-right: calc(145.5 / 627 * 100%);
+        position: relative;
+        @media (max-width: 768px) {
+            width: 100%;
+            padding-bottom: calc(73 / 345 * 100%);
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 20px;
+        }
+        .little {
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            width: calc(298 / 627 * 100%);
+            @media (max-width: 768px) {
+                top: auto;
+                bottom: 0;
+                transform: translateX(-50%) scaleX(-1);
+                width: calc(219 / 345 * 100%);
+                aspect-ratio: 219 / 232;
+                left: 50%;
+            }
+        }
+        .big {
+            width: 100%;
+            @media (max-width: 768px) {
+                aspect-ratio: 345 / 402;
+                transform: scaleX(-1);
+            }
+        }
+    }
+}
+
+.list-service-advantages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    // .service-advantages__item
+    &__item {
+        display: grid;
+        grid-template-columns: calc(100% - (82% + 20px)) 82%; /* Первая колонка занимает оставшееся пространство, вторая 82% от контейнера */
+        column-gap: 20px; /* Расстояние между колонками */
+
+        @include responsive-clamp(font-size, 20px, 30px);
+        @include responsive-clamp(line-height, 30px, 40px);
+
+        h4 {
+            grid-column: 2; /* Вторая колонка */
+            grid-row: 1; /* Первая строка */
+            margin-bottom: 20px;
+        }
+        p {
+            @include responsive-clamp(font-size, 14px, 20px);
+            @include responsive-clamp(line-height, 24px, 32px);
+
+            grid-column: 2; /* Вторая колонка */
+            grid-row: 2; /* Вторая строка */
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 40;
+            color: rgba(255, 255, 255, 0.4);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+
+            grid-row: 1/3;
+            grid-column: 1;
+        }
+    }
+}
+.list-service-advantages__item:not(:has(p)) {
+    display: flex;
+}
+
+.gray-text-20 {
+    text-transform: none;
+}
+

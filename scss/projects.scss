@@ -1,0 +1,61 @@
+.projects {
+    @include responsive-clamp(padding-bottom, 60px, 140px);
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+    // .projects__container
+
+    // .projects__title
+
+    &__title {
+        @include responsive-clamp(margin-bottom, 20px, 140px);
+    }
+
+    // .projects__grid
+
+    &__grid {
+        @include responsive-clamp(margin-bottom, 40px, 140px);
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 120px;
+        }
+    }
+
+    // .projects__item
+
+    &__item {
+    }
+
+    // .projects__image
+
+    &__image {
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+
+    // .projects__label
+
+    &__label {
+        display: flex;
+        column-gap: 33px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    // .projects__text
+
+    &__text {
+    }
+
+    // .projects__price
+
+    &__price {
+        &.font-manrope {
+            color: rgba($color: #fff, $alpha: 0.5);
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.statistics {
+    @include responsive-clamp(margin-bottom, 40px, 140px);
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+    // .statistics__item
+
+    &__item {
+        flex-basis: percentage($number: 445/1840);
+        @media (max-width: 768px) {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+        }
+    }
+
+    // .statistics__text
+
+    &__text {
+        &.font-manrope {
+            text-transform: uppercase;
+            @include responsive-clamp(font-size, 14px, 16px);
+            @include responsive-clamp(line-height, 20px, 28px);
+            color: rgba($color: #fff, $alpha: 0.5);
+        }
+    }
+
+    &__title {
+        @media (min-width: 768px) {
+            margin-bottom: 30px;
+        }
+    }
+}

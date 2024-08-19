@@ -1,0 +1,45 @@
+.service-main-block {
+}
+
+.service-main-block {
+    // .service-main-block__container
+    @include responsive-clamp(margin-bottom, 87px, 140px);
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 24.63%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%), url('..images/service/bg-main.jpg'),
+        rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        max-width: 1880px;
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: flex-end;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    // .service-main-block__title
+
+    &__title {
+        color: rgb(255, 255, 255);
+        font-family: Brewery;
+        font-size: clamp(45px, 5vw, 140px);
+        font-weight: 400;
+        line-height: clamp(55px, 6vw, 140px);
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: clamp(23px, 3vw, 60px);
+    }
+
+    // .service-main-block__arrow
+
+    &__arrow {
+    }
+}

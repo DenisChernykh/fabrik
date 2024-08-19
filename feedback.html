@@ -8,30 +8,237 @@
 
 	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
 	<title>Отзывы</title>
+  <script type="module" crossorigin src="/assets/main.BfZTtxKw.js"></script>
+  <link rel="stylesheet" crossorigin href="/main.BbqYpT9G.css">
 </head>
 
 <body>
 	<div id='app'>
 		<header class='header-main-block'>
-			{{> header}}
-
+			<div class='header-main-block__container'>
+			    <nav class='header__menu menu-header'>
+			        <ul class='menu-header__list menu-header__list--left'>
+			            <li class='menu-header__item'><a href='/portfolio.html'>Портфолио</a></li>
+			            <li class='menu-header__item'><a href='/for-designers.html'>Дизайнер</a></li>
+			        </ul>
+			        <div class='menu-header__logo'>
+			            <a href='index.html'>
+			                <img src='icons/logo.svg' alt='Логотип' /></a>
+			        </div>
+			        <ul class='menu-header__list menu-header__list--right'>
+			            <li class='menu-header__item'><a href='contacts.html'>Контакты</a></li>
+			            <li class='menu-header__item'><a href='3d-project.html'>Заказать</a></li>
+			        </ul>
+			    </nav>
+			
+			    <nav hidden class='menu-mobile'>
+			        <button type='button' class='menu-icon icon-menu'></button>
+			        <div class='menu-mobile__logo'>
+			            <img src='icons/logo.svg' alt='Логотип' />
+			        </div>
+			        <div class='menu-mobile__body'>
+			
+			            <ul class='menu-mobile__list'>
+			                <li class='menu-mobile__item menu-mobile__item_active'><a href='/portfolio.html'>Портфолио</a></li>
+			                <li class='menu-mobile__item'><a href='/for-designers.html'>Дизайнер</a></li>
+			
+			                <li class='menu-mobile__item'><a href='contacts.html'>Контакты</a></li>
+			                <li class='menu-mobile__item'><a href='3d-project.html'>Заказать</a></li>
+			            </ul>
+			        </div>
+			    </nav>
+			    <button type='button' class='menu-icon icon-menu'></button>
+			</div>
 		</header>
 		<main class="feedback-page">
 			<section class="main-block">
-				{{> feedback/main-block}}
-			</section>
+				<div class='main-block__container'>
+				    <h1 class='main-block__title page-title'>Отзывы </h1>
+				
+				    <div class='main-block__arrow'>
+				        <img src='icons/main-block__arrow.svg' alt='Прокрутка вниз' />
+				    </div>
+				</div>			</section>
 			<div class="feedback-page__container">
 				<section class="feedbacks">
-					{{> feedback/feedbacks}}
-				</section>
+					<header class='feedback__header'>
+					    <div class='feedback__block'>
+					        <div class='user'>
+					            <div class='user__avatar'>
+					                <img src='images/avatar.jpg' alt='Фото пользователя' />
+					            </div>
+					            <div class='user__name'>Иванова Катя</div>
+					        </div>
+					        <p class='feedback-item__text'>Единственная компания в Москве, которая смогла сделать шкаф с фасадами высотой 3
+					            метра и без швов. Задача была сложная и сильно ограничена сроками. Результатом довольны...</p>
+					        <a href='' class='feedback-item__all font-manrope'>Смотреть оригинал</a>
+					    </div>
+					    <h2 class='feedback__title section-title'>Отзывы</h2>
+					</header>
+					<div class='feedback__row'>
+					
+					    <div class='feedback-item'>
+					        <div class='user'>
+					            <div class='user__avatar'>
+					                <img src='images/avatar.jpg' alt='Фото пользователя' />
+					            </div>
+					            <div class='user__name'>Иванова Катя</div>
+					        </div>
+					        <p class='feedback-item__text'>Единственная компания в Москве, которая смогла сделать шкаф с фасадами высотой 3
+					            метра и без швов. Задача была сложная и сильно ограничена сроками. Результатом довольны...</p>
+					        <a href='' class='feedback-item__all font-manrope'>Смотреть оригинал</a>
+					    </div>
+					    <div class='feedback-item'>
+					        <div class='user'>
+					            <div class='user__avatar'>
+					                <img src='images/avatar.jpg' alt='Фото пользователя' />
+					            </div>
+					            <div class='user__name'>Иванова Катя</div>
+					        </div>
+					        <p class='feedback-item__text'>Единственная компания в Москве, которая смогла сделать шкаф с фасадами высотой 3
+					            метра и без швов. Задача была сложная и сильно ограничена сроками. Результатом довольны...</p>
+					        <a href='' class='feedback-item__all font-manrope'>Смотреть оригинал</a>
+					    </div>
+					</div>				</section>
 			</div>
 		</main>
 		<footer class="feedback-footer">
-			{{> footer}}
-		</footer>
+			<div class='footer__container'>
+			    <div class='footer__body body-footer'>
+			        <div class='body-footer__row'>
+			            <div class='body-footer__item item-footer'>
+			                <h3 class='item-footer__title'><a href='' class='item-footer__title'>Портфолио</a></h3>
+			                <nav class='menu-footer'>
+			                    <ul class='menu-footer__list'>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Шкафа</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Гардеробные</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Кухни</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Гостиные</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Мебель для ванной</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Детские</a>
+			                        </li>
+			                    </ul>
+			                </nav>
+			            </div>
+			            <div class='body-footer__item item-footer'>
+			                <h3 class='item-footer__title'><a href='' class='item-footer__title'>Заказчикам</a></h3>
+			                <nav class='menu-footer'>
+			                    <ul class='menu-footer__list'>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>галереии</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>акции</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>материалы и декор</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>наш сервис</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>гарантия</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>декор</a>
+			                        </li>
+			                    </ul>
+			                </nav>
+			            </div>
+			            <div class='body-footer__item item-footer'>
+			                <h3 class='item-footer__title'><a href='' class='item-footer__title'>Компания</a></h3>
+			                <nav class='menu-footer'>
+			                    <ul class='menu-footer__list'>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>О компании</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Отзывы</a>
+			                        </li>
+			                        <li class='menu-footer__item'>
+			                            <a href='' class='menu-footer__link font-manrope'>Контакты</a>
+			                        </li>
+			                    </ul>
+			                </nav>
+			            </div>
+			            <div class='body-footer__item item-footer item-footer_socials'>
+			                <h3 class='item-footer__title'><a href='' class='item-footer__title'>Сотрудничество</a></h3>
+			                <nav class='menu-footer menu-footer_socials'>
+			                    <ul class='menu-footer__list menu-footer__list_socials'>
+			                        <li class='menu-footer__item menu-footer__item_socials'>
+			                            <a
+			                                class='menu-footer__link font-manrope'
+			                                href='mailto:infofabric.st@gmail.com'
+			                            >infofabric.st@gmail.com</a>
+			                            <div class='socials'>
+			                                <div class='socials__icon'>
+			                                    <a
+			                                        href='https://t.me/your_channel'
+			                                        target='_blank'
+			                                        rel='noopener noreferrer'
+			                                        aria-label='Телеграм канал'
+			                                    >
+			                                        <img src='icons/tg.svg' alt='Иконка телеграма' /></a>
+			                                </div>
+			                                <div class='socials__icon'>
+			                                    <a
+			                                        href='https://vk/your_channel'
+			                                        target='_blank'
+			                                        rel='noopener noreferrer'
+			                                        aria-label='Канал во вконтакте'
+			                                    >
+			                                        <img src='icons/vk.svg' alt='Иконка вк' /></a>
+			                                </div>
+			                                <div class='socials__icon'>
+			                                    <a
+			                                        href='https://www.instagram.com/yourusername'
+			                                        target='_blank'
+			                                        rel='noopener noreferrer'
+			                                        aria-label='Страница инстаграмм'
+			                                    >
+			                                        <img src='icons/inst.svg' alt='Иконка инстаграмм' /></a>
+			                                </div>
+			                                <div class='socials__icon'>
+			                                    <a
+			                                        href='https://wa.me/1234567890'
+			                                        target='_blank'
+			                                        rel='noopener noreferrer'
+			                                        aria-label='Ватсап канал канал'
+			                                    >
+			                                        <img src='icons/wa.svg' alt='Икона WatsApp' /></a>
+			                                </div>
+			                            </div>
+			                        </li>
+			                    </ul>
+			                </nav>
+			            </div>
+			        </div>
+			    </div>
+			    <div class='footer__bottom bottom-footer'>
+			        <p class='bottom-footer__copyright font-manrope'><small>© FaБRИК — 2024</small></p>
+			        <div class='bottom-footer__logo'>
+			            <a href='/' aria-label='На главную'>
+			                <img src='icons/logo.svg' alt='Логотип' />
+			            </a>
+			        </div>
+			        <div class='bottom-footer__politics font-manrope'>
+			            <a href='/privacy-policy' aria-label='Политика конфиденциальности'>Политика конфиденциальности</a>
+			        </div>
+			    </div>
+			</div>		</footer>
 
 	</div>
-	<script type='module' src='/main.js'></script>
 </body>
 
 </html>

@@ -1,0 +1,15 @@
+.image {
+    // .image__container
+    @include responsive-clamp(margin-bottom, 20px, 140px);
+    &__container {
+    }
+
+    &__image {
+        background: url('images/project/bg.jpg');
+        max-width: 1840px;
+        aspect-ratio: calc(1840 / 1200);
+        border-radius: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

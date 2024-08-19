@@ -7,60 +7,761 @@
 
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>FABRИК</title>
+
+    <link rel="stylesheet" href="main.BbqYpT9G.css">
 </head>
 
 <body>
     <div id='app'>
         <header class='header-main-block'>
-            {{> header}}
+            <div class='header-main-block__container'>
+                <nav class='header__menu menu-header'>
+                    <ul class='menu-header__list menu-header__list--left'>
+                        <li class='menu-header__item'><a href='/portfolio.html'>Портфолио</a></li>
+                        <li class='menu-header__item'><a href='/for-designers.html'>Дизайнер</a></li>
+                    </ul>
+                    <div class='menu-header__logo'>
+                        <a href='index.html'>
+                            <img src='icons/logo.svg' alt='Логотип' /></a>
+                    </div>
+                    <ul class='menu-header__list menu-header__list--right'>
+                        <li class='menu-header__item'><a href='contacts.html'>Контакты</a></li>
+                        <li class='menu-header__item'><a href='3d-project.html'>Заказать</a></li>
+                    </ul>
+                </nav>
 
+                <nav hidden class='menu-mobile'>
+                    <button type='button' class='menu-icon icon-menu'></button>
+                    <div class='menu-mobile__logo'>
+                        <img src='icons/logo.svg' alt='Логотип' />
+                    </div>
+                    <div class='menu-mobile__body'>
+
+                        <ul class='menu-mobile__list'>
+                            <li class='menu-mobile__item menu-mobile__item_active'><a
+                                    href='/portfolio.html'>Портфолио</a></li>
+                            <li class='menu-mobile__item'><a href='/for-designers.html'>Дизайнер</a></li>
+
+                            <li class='menu-mobile__item'><a href='contacts.html'>Контакты</a></li>
+                            <li class='menu-mobile__item'><a href='3d-project.html'>Заказать</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <button type='button' class='menu-icon icon-menu'></button>
+            </div>
         </header>
         <main class='main-page'>
             <section class='main-block'>
-                {{> main-block}}
+                <div class='main-block__container'>
+                    <h1 class='main-block__title page-title'>Сделано для уюта вашей души</h1>
+
+                    <a href='#about-us' class='main-block__arrow scroll-link' data-target='#about-us'
+                        aria-label='Прокрутка вниз'>
+                        <img src='icons/main-block__arrow.svg' alt='Иконка стрелки для прокрутки вниз' />
+                    </a>
+                </div>
             </section>
             <div class="main-page__container">
                 <section id="about-us" class="about-us">
-                    {{> about-us}}
+                    <div class='about-us__row'>
+                        <div class='about-us__item'>
+                            <p class='about-us__text'>
+                                Мы команда профессионалов в области дизайна и производства уникальной мебели
+                            </p>
+                        </div>
+                        <div class='about-us__item'>
+                            <div class='about-us__years years-about-us'>
+                                <div class='years-about-us__number'>20</div>
+                                <div class='years-about-us__title-container'>
+                                    <h3 class='years-about-us__title'>Лет опыта</h3>
+                                </div>
+                                <div class='years-about-us__text-content'>
+                                    <p class='years-about-us__text gray-text'>Спроектируем и изготовим мебель любого
+                                        назначения и сложности
+                                        точно в срок. Работаем на итальянском оборудовании с использованием премиум
+                                        материалов и фурнитуры.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="statistics">
-                    {{> statistics}}
+                    <div class='statistics__row'>
+                        <div class='statistics__item'>
+                            <h5 class='statistics__title'>3 000+</h5>
+                            <p class='statistics__text font-manrope'>Работ в портфолио</p>
+                        </div>
+                        <div class='statistics__item'>
+                            <h5 class='statistics__title'>7-35 лет</h5>
+                            <p class='statistics__text font-manrope'>Опыт сотрудников</p>
+                        </div>
+                        <div class='statistics__item'>
+                            <h5 class='statistics__title'>6 лет</h5>
+                            <p class='statistics__text font-manrope'>гарантия</p>
+                        </div>
+                        <div class='statistics__item'>
+                            <h5 class='statistics__title'>40+</h5>
+                            <p class='statistics__text font-manrope'>сотрудников в компании</p>
+                        </div>
+                    </div>
                 </section>
                 <section class="our-team">
-                    {{> our-team}}
+                    <div data-swiper='true' class='swiper swiper__team-photo'>
+                        <div data-swiper-wrapper='true' class='swiper-wrapper our-team__images'>
+
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/1.jpg' srcset='images/team/1@2x.jpg 2x'
+                                    srcset='images/team/1@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/2.jpg' srcset='images/team/2@2x.jpg 2x'
+                                    srcset='images/team/2@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/3.jpg' srcset='images/team/3@2x.jpg 2x'
+                                    srcset='images/team/3@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/4.jpg' srcset='images/team/4@2x.jpg 2x'
+                                    srcset='images/team/4@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/5.jpg' srcset='images/team/5@2x.jpg 2x'
+                                    srcset='images/team/5@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+                            <div data-swiper-slide='true' class='our-team__image-wrapper swiper-slide'>
+                                <img class='our-team__image' src='images/team/6.jpg' srcset='images/team/6@2x.jpg 2x'
+                                    srcset='images/team/6@3x.jpg 3x' alt='Фото сотрудника' />
+                            </div>
+
+                        </div>
+                        <a href='about.html' class='our-team__link label-link'>
+                            <span class='label-link__plus'>
+                                <img src='icons/plus-add.svg' alt='Иконка ссылки' /></span>
+                            <span class='label-link__text'>О компании</span>
+                        </a>
+                    </div>
                 </section>
                 <section class="advantages">
-                    {{> advantages}}
+                    <div class='advantages__row'>
+                        <div class='advantages__item advantages__item--title'>
+                            <h2 class='advantages__title'>Наши преимущества</h2>
+                        </div>
+                        <div class='advantages__item advantages__item--list'>
+                            <ul class='advantages__list list-advantages'>
+                                <li class='list-advantages__item'><span></span>собственное производство</li>
+                                <li class='list-advantages__item'><span></span>Гарантия 6 лет</li>
+                                <li class='list-advantages__item'><span></span>Бесплатный замер</li>
+                                <li class='list-advantages__item'><span></span>Выезд в течение 24 часов</li>
+                                <li class='list-advantages__item'><span></span>Профессиональная бесплатная консультация
+                                </li>
+                            </ul>
+                        </div>
+                        <div class='advantages__item advantages__item--link'>
+                            <a href='3d-project.html' class='our-team__link label-link'>
+                                <span class='label-link__plus'>
+                                    <img src='icons/plus-add.svg' alt='Иконка добавления заказа' />
+                                </span>
+                                <span class='label-link__text'>Оставить заявку</span>
+                            </a>
+                        </div>
+                    </div>
                 </section>
                 <section class="material-categories">
-                    {{> material-categories}}
+                    <div class='material-categories__row'>
+                        <div class='material-categories__item'>
+
+                            <article class='material-categories__image'>
+                                <img src='images/material-categories/1.jpg'
+                                    srcset='images/material-categories/1@2x.jpg 2x images/material-categories/1@3x.jpg 3x'
+                                    alt='Фасады' />
+                            </article>
+                            <h3 class='material-categories__title'>Фасады</h3>
+                            <p class='material-categories__text font-manrope'>Более 10 видов покрытий, исполнение
+                                по вашему эскизу.
+                                Фрезеровка, покраска, шпон экзотических пород дерева, итальянская природная TSS-плита,
+                                испанский UF-пластик,
+                                стекло, металл и другие варианты</p>
+                        </div>
+                        <article class='material-categories__item'>
+                            <div class='material-categories__image'>
+                                <img src='images/material-categories/2.jpg'
+                                    srcset='images/material-categories/2@2x.jpg 2x images/material-categories/2@3x.jpg 3x'
+                                    alt='Корпус' />
+                            </div>
+                            <h3 class='material-categories__title'>Корпус</h3>
+                            <p class='material-categories__text font-manrope'>Более 10 видов материалов: МДФ, ЛДСП,
+                                фанера, шпон, металл,
+                                камень, акрил и другие. Индивидуальное изготовление элементов мебели в художественной
+                                мастерской</p>
+                        </article>
+                        <article class='material-categories__item'>
+                            <div class='material-categories__image'>
+                                <img src='images/material-categories/3.jpg'
+                                    srcset='images/material-categories/3@2x.jpg 2x images/material-categories/3@3x.jpg 3x'
+                                    alt='Фурнитура' />
+                            </div>
+                            <h3 class='material-categories__title'>Фурнитура</h3>
+                            <div class='material-categories__text font-manrope'>Blum, Kessebohmer, Hettich, Volpato,
+                                Brass, Amig, GTv,
+                                Hafele, Makmart, Возможен спецзаказ</div>
+                        </article>
+                    </div>
                 </section>
                 <section class="projects">
-                    {{> projects}}
+                    <h2 class='projects__title page-title'>Реализованные проекты</h2>
+                    <div data-swiper='true' class='swiper__projects' role='region' aria-label='Реализованные проекты'>
+                        <div data-swiper-wrapper='true' class='projects__grid'>
+                            <a role='link' aria-label='Подробнее о мебели для прихожей стоимостью 517 000 рублей'
+                                href='project.html' data-swiper-slide='true' class='projects__item'>
+                                <div class='projects__image'>
+                                    <img src='images/projects/1.jpg'
+                                        srcset='images/projects/1@2x.jpg 2x, images/projects/1@3x.jpg 3x'
+                                        alt='Пример прихожей' />
+                                </div>
+                                <div class='projects__label'>
+                                    <h4 class='projects__text'>Мебель для прихожей</h4>
+                                    <p class='projects__price font-manrope'>517 000 ₽</p>
+                                </div>
+                            </a>
+                            <a role='link' aria-label='Подробнее о мебели для кухни стоимостью 976 000 рублей'
+                                href='project.html' data-swiper-slide='true' class='projects__item'>
+                                <div class='projects__image'>
+                                    <img src='images/projects/2.jpg'
+                                        srcset='images/projects/2@2x.jpg 2x, images/projects/2@3x.jpg 3x'
+                                        alt='Пример кухни' />
+                                </div>
+                                <div class='projects__label'>
+                                    <h4 class='projects__text'>Мебель для кухни</h4>
+                                    <p class='projects__price font-manrope'>976 000 ₽</p>
+                                </div>
+                            </a>
+                            <a role='link' aria-label='Подробнее о мебели для гостиной стоимостью 430 000 рублей'
+                                href='project.html' data-swiper-slide='true' class='projects__item'>
+                                <div class='projects__image'>
+                                    <img src='images/projects/3.jpg'
+                                        srcset='images/projects/3@2x.jpg 2x, images/projects/3@3x.jpg 3x'
+                                        alt='Пример гостиной' />
+                                </div>
+                                <div class='projects__label'>
+                                    <h4 class='projects__text'>Мебель для гостиной</h4>
+                                    <p class='projects__price font-manrope'>430 000 ₽</p>
+                                </div>
+                            </a>
+                            <a role='link' aria-label='Подробнее о мебели для гардеробной стоимостью 698 400 рублей'
+                                href='project.html' data-swiper-slide='true' class='projects__item'>
+                                <div class='projects__image'>
+                                    <img src='images/projects/4.jpg'
+                                        srcset='images/projects/4@2x.jpg 2x, images/projects/4@3x.jpg 3x'
+                                        alt='Пример гардеробной' />
+                                </div>
+                                <div class='projects__label'>
+                                    <h4 class='projects__text'>Мебель для гардеробной</h4>
+                                    <p class='projects__price font-manrope'>698 400 ₽</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <a role='link' aria-label='Смотреть все проекты' href='portfolio.html'
+                        class='projects__link label-link'>
+                        <span class='label-link__plus'>
+                            <img src='icons/plus-add.svg' alt='Иконка ссылки' /></span>
+                        <span class='label-link__text'>Смотреть все</span>
+                    </a>
                 </section>
                 <section class="for-designers">
-                    {{> for-designers}}
+                    <div class='for-designers__row'>
+
+                        <div class='for-designers__item for-designers__item--text-content'>
+                            <h2 class='for-designers__title'>Предложение для дизайнеров и архитекторов</h2>
+                            <p class='for-designers__text font-manrope'>Изготовим уникальную мебель для ваших проектов
+                                под заказ на
+                                собственном итальянском оборудовании. Наши производственные возможности позволяют
+                                реализовать самые сложные
+                                идеи, а богатый опыт за спиной гарантирует качество и точные сроки. Умеем всё и даже
+                                больше!</p>
+                        </div>
+                        <div class='for-designers__item for-designers__item--image'>
+                            <div class='swiper swiper__for-designers'>
+                                <!-- Обертка для слайдов -->
+                                <div class='swiper-wrapper swiper-wrapper-for-designers'>
+                                    <!-- Слайды -->
+                                    <div class='swiper-slide swiper-slide__for-designers for-designers-swiper-slide'>
+                                        <div class='for-designers-swiper-slide__img-container'>
+                                            <div class='for-designers-swiper-slide__preview-pictures'>
+                                                <img class='for-designers-swiper-slide__img-1'
+                                                    src='images/for-designers/1.jpg' alt='Превью 1'
+                                                    class='preview-picture' />
+                                                <img class='for-designers-swiper-slide__img-2'
+                                                    src='images/for-designers/2.jpg' alt='Превью 2'
+                                                    class='preview-picture' />
+                                                <img class='for-designers-swiper-slide__img-3'
+                                                    src='images/for-designers/3.jpg' alt='Превью 3'
+                                                    class='preview-picture' />
+                                            </div>
+                                            <div class='for-designers-swiper-slide__main-picture'>
+                                                <img src='images/for-designers/main.jpg' alt='Предложение' />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide swiper-slide__for-designers for-designers-swiper-slide'>
+                                        <div class='for-designers-swiper-slide__img-container'>
+
+                                            <div class='for-designers-swiper-slide__main-picture'>
+                                                <img src='images/for-designers/main.jpg' alt='Предложение' />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide swiper-slide__for-designers for-designers-swiper-slide'>
+                                        <div class='for-disigners-swiper-slide__img-container'>
+
+                                            <div class='for-designers-swiper-slide__main-picture'>
+                                                <img src='images/for-designers/main.jpg' alt='Предложение' />
+                                            </div>
+                                            <div class='for-designers-swiper-slide__preview-pictures'>
+                                                <img src='images/for-designers/1.jpg' alt='Превью 1'
+                                                    class='preview-picture' />
+                                                <img src='images/for-designers/2.jpg' alt='Превью 2'
+                                                    class='preview-picture' />
+                                                <img src='images/for-designers/3.jpg' alt='Превью 3'
+                                                    class='preview-picture' />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class='swiper-slide swiper-slide__for-designers for-designers-swiper-slide'>
+                                        <div class='for-designers-swiper-slide__img-container'>
+
+                                            <div class='for-designers-swiper-slide__main-picture'>
+                                                <img src='images/for-designers/main.jpg' alt='Предложение' />
+                                            </div>
+                                            <div class='for-designers-swiper-slide__preview-pictures'>
+                                                <img src='images/for-designers/1.jpg' alt='Превью 1'
+                                                    class='preview-picture' />
+                                                <img src='images/for-designers/2.jpg' alt='Превью 2'
+                                                    class='preview-picture' />
+                                                <img src='images/for-designers/3.jpg' alt='Превью 3'
+                                                    class='preview-picture' />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Добавьте больше слайдов по необходимости -->
+                                </div>
+
+                                <!-- Навигационные стрелки (опционально) -->
+                                <div class='swiper-control'>
+
+                                    <button class='swiper-button-prev-for-designers'>
+
+                                        <span class='swiper-button-prev__arrow'>
+                                            <img src='icons/arrow_left.svg' alt='Следующий слайд' />
+                                        </span>
+
+                                    </button>
+                                    <div class='swiper-pagination-fabrik fraction-for-designers'>
+                                        <span class='fraction-for-designers__current'>0 </span>
+                                        &#8212;
+                                        <span class='fraction-for-designers__all'>0</span>
+                                    </div>
+                                    <button class='swiper-button-next-for-designers'>
+
+                                        <span class='swiper-button-next__arrow'>
+                                            <img src='icons/arrow_right.svg' alt='Предыдущий слайд' />
+                                        </span>
+
+                                    </button>
+                                    <!-- Навигационные точки (опционально) -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class='for-designers__item for-designers__item--link'>
+                            <a href='' class='for-designers__link label-link'>
+                                <span class='label-link__plus'>
+                                    <img src='icons/plus-add.svg' alt='Иконка ссылки' />
+                                </span>
+                                <span class='label-link__text'>Подробнее</span>
+                            </a>
+                        </div>
+                    </div>
                 </section>
                 <section class="gallery">
-                    {{> gallery title='смотреть все'}}
+                    <h2 class='gallery__title'>Галерея</h2>
+                    <div class='swiper swiper__gallery'>
+                        <!-- Обертка для слайдов -->
+                        <div class='swiper-wrapper swiper-wrapper-gallery'>
+                            <!-- Слайды -->
+                            <div class='swiper-slide gallery-swiper-slide'>
+                                <img src='images/gallery/1.jpg' alt='Галлерея' />
+                            </div>
+                            <div class='swiper-slide gallery-swiper-slide'>
+                                <img src='images/gallery/2.jpg' alt='Галлерея' />
+                            </div>
+                            <div class='swiper-slide gallery-swiper-slide'>
+                                <img src='images/gallery/3.jpg' alt='Галлерея' />
+                            </div>
+                            <div class='swiper-slide gallery-swiper-slide'>
+                                <img src='images/gallery/4.jpg' alt='Галлерея' />
+                            </div>
+                            <div class='swiper-slide gallery-swiper-slide'>
+                                <img src='images/gallery/1.jpg' alt='Галлерея' />
+                            </div>
+
+                            <!-- Добавьте больше слайдов по необходимости -->
+                        </div>
+
+                        <!-- Навигационные стрелки (опционально) -->
+
+                    </div>
+                    <div class='gallery__bottom'>
+                        <a href='' class='label-link labe-link-gallery'>
+                            <span class='label-link__plus'>
+                                <img src='icons/plus-add.svg' alt='Иконка ссылки' />
+                            </span>
+                            <span class='label-link__text'>смотреть все</span>
+                        </a>
+                        <div class='swiper-control swiper-control-gallery'>
+                            <button class='swiper-button-prev-gallery'>
+                                <span class='swiper-button-prev__arrow'>
+                                    <img src='icons/arrow_left.svg' alt='Следующий слайд' />
+                                </span>
+                            </button>
+                            <div class='swiper-pagination-fabrik fraction-gallery'>
+                                <span class='fraction-gallery__current'>0 </span>
+                                &#8212;
+                                <span class='fraction-gallery__all'>0</span>
+                            </div>
+                            <button class='swiper-button-next-gallery'>
+                                <span class='swiper-button-next__arrow'>
+                                    <img src='icons/arrow_right.svg' alt='Предыдущий слайд' />
+                                </span>
+                            </button>
+                            <!-- Навигационные точки (опционально) -->
+                        </div>
+                    </div>
                 </section>
                 <section class="feedback">
-                    {{> feedback}}
+                    <div class='feedback__row'>
+                        <div class='feedback__item feedback__item--title'>
+                            <h2 class='feedback__title section-title'>Отзывы</h2>
+
+                        </div>
+                        <div class='feedback__item feedback__item--body'>
+                            <div class='swiper swiper__feedback'>
+                                <!-- Обертка для слайдов -->
+                                <div class='swiper-wrapper swiper-wrapper-feedback'>
+                                    <!-- Слайды -->
+                                    <div class='swiper-slide feedback-swiper-slide'>
+                                        <div class='feedback-swiper-slider__user user'>
+                                            <div class='user__avatar'>
+                                                <img src='images/avatar.jpg' alt='Фото пользователя' />
+                                            </div>
+                                            <div class='user__name'>Иванова Катя</div>
+                                        </div>
+                                        <p class='feedback-swiper-slide__text'>Единственная компания в Москве, которая
+                                            смогла сделать шкаф с
+                                            фасадами высотой 3 метра и без швов. Задача была сложная и сильно ограничена
+                                            сроками.
+                                            Результатом довольны...<span class='feedback-swiper-slide__text'
+                                                style='display:none'>Еrr</span></p>
+                                        <button type='button' class='feedback__all font-manrope'>Читать
+                                            полностью</button>
+
+                                    </div>
+                                    <div class='swiper-slide feedback-swiper-slide'>
+                                        <div class='feedback-swiper-slider__user user'>
+                                            <div class='user__avatar'>
+                                                <img src='images/avatar.jpg' alt='Фото пользователя' />
+                                            </div>
+                                            <div class='user__name'>Иванова Катя</div>
+                                        </div>
+                                        <p class='feedback-swiper-slide__text'>Единственная компания в Москве, которая
+                                            смогла сделать шкаф с
+                                            фасадами высотой 3 метра и без швов. Задача была сложная и сильно ограничена
+                                            сроками.
+                                            Результатом довольны Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Labore nostrum
+                                            debitis quo provident vero dolores perspiciatis deserunt, exercitationem
+                                            tenetur eaque,
+                                            reiciendis doloremque tempora adipisci repellat modi esse aperiam sapiente,
+                                            eos reprehenderit
+                                            corporis necessitatibus. Velit incidunt voluptate, aliquam inventore sit
+                                            corporis, cupiditate,
+                                            et numquam ipsam ab cum at quibusdam illum quos!
+                                            <span class='feedback-swiper-slide__text' style='display:none'>Еrr</span>
+                                        </p>
+                                        <button type='button' class='feedback__all font-manrope'>Читать
+                                            полностью</button>
+                                    </div>
+                                    <div class='swiper-slide feedback-swiper-slide'>
+                                        <div class='feedback-swiper-slider__user user'>
+                                            <div class='user__avatar'>
+                                                <img src='images/avatar.jpg' alt='Фото пользователя' />
+                                            </div>
+                                            <div class='user__name'>Иванова Катя</div>
+                                        </div>
+                                        <p class='feedback-swiper-slide__text'>Единственная компания в Москве, которая
+                                            смогла сделать шкаф с
+                                            фасадами высотой 3 метра и без швов. Задача была сложная и сильно ограничена
+                                            сроками.
+                                            Результатом довольны...<span class='feedback-swiper-slide__text'
+                                                style='display:none'>Еrr</span></p>
+                                        <button type='button' class='feedback__all font-manrope'>Читать
+                                            полностью</button>
+                                    </div>
+
+                                    <!-- Добавьте больше слайдов по необходимости -->
+                                </div>
+
+                                <!-- Навигационные стрелки (опционально) -->
+
+                            </div>
+                            <div class='feedback__bottom'>
+
+                                <div class='swiper-control feedback-swiper-control'><button
+                                        class='swiper-button-prev-feedback'>
+                                        <span class='swiper-button-prev__arrow'>
+                                            <img src='icons/arrow_left.svg' alt='Следующий слайд' />
+                                        </span>
+                                    </button>
+                                    <div class='swiper-pagination-fabrik fraction-feedback'>
+                                        <span class='fraction-feedback__current'>0 </span>
+                                        &#8212;
+                                        <span class='fraction-feedback__all'>0</span>
+                                    </div>
+                                    <button class='swiper-button-next-feedback'>
+                                        <span class='swiper-button-next__arrow'>
+                                            <img src='icons/arrow_right.svg' alt='Предыдущий слайд' />
+                                        </span>
+                                    </button>
+                                    <!-- Навигационные точки (опционально) -->
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class='feedback__item feedback__item--link'>
+                            <a href='' class='feedback__link label-link'>
+                                <span class='label-link__plus'>
+                                    <img src='icons/plus-add.svg' alt='Иконка ссылки' />
+                                </span>
+                                <span class='label-link__text'>Смотреть все</span>
+                            </a>
+                        </div>
+                    </div>
                 </section>
                 <section class="form">
-                    {{> form}}
+                    <h2 class='form__title section-title'>Узнайте стоимость и сроки изготовления вашей мебели</h2>
+
+                    <form class='choose-form'>
+
+                        <div class='form__title-container'>
+                            <h3 class='choose-form__title font-manrope'>Какую мебель необходимо изготовить?</h3>
+                            <div class='choose-form__page font-manrope'>01/05</div>
+                        </div>
+                        <div class='choose-form__grid'>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-closet' name='furniture-type' />
+                                <label for='furniture-closet'>Шкаф</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-kitchen' name='furniture-type' />
+                                <label for='furniture-kitchen'>Кухня</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-wardrobe' name='furniture-type' />
+                                <label for='furniture-wardrobe'>Гардеробная</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-living-room' name='furniture-type' />
+                                <label for='furniture-living-room'>Мебель для гостиной</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-kids-room' name='furniture-type' />
+                                <label for='furniture-kids-room'>Мебель для детской</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-bathroom' name='furniture-type' />
+                                <label for='furniture-bathroom'>Мебель для ванной</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-office' name='furniture-type' />
+                                <label for='furniture-office'>Кабинет</label>
+                            </div>
+                            <div class='choose-form__item font-manrope'>
+                                <input type='radio' id='furniture-other' name='furniture-type' />
+                                <label for='furniture-other'>Другое</label>
+                            </div>
+                        </div>
+                        <div class='form__bottom'>
+                            <button type='button' class='form-prev'>Назад</button>
+                            <div class='form__progress'></div>
+                            <button type='button' class='form-next'>Далее</button>
+                        </div>
+                    </form>
                 </section>
                 <section class="contacts">
-                    {{> contacts}}
+                    <div class='contacts__row'>
+                        <article class='contacts__column'>
+                            <div class='contacts__district'>Москва-Юг</div>
+                            <div class='contacts__phone'>
+                                <a href='tel:+79268287755'>+7 926 828 77 55</a>
+                            </div>
+                            <div class='contacts__map font-manrope'>
+                                <address class='contacts__address'>Химки, ул. Бутаково 4, МТК Гранд</address>
+                                <a href=''>Смотреть на карте</a>
+                            </div>
+                            <div class='contacts__wa'>
+                                <a href='https://wa.me/your_channel' target='_blank' rel='noopener noreferrer'
+                                    aria-label='WatsApp'>
+                                    <img src='icons/wa.svg' alt='Иконка ватсапа' />
+                                </a>
+                            </div>
+                        </article>
+                        <article class='contacts__column'>
+                            <div class='contacts__district'>Москва-Север</div>
+                            <div class='contacts__phone'>
+                                <a href='tel:+79268287755'>+7 916 129 80 88</a>
+                            </div>
+                            <div class='contacts__map font-manrope'>
+                                <address class='contacts__address'>Химки, ул. Бутаково 4, МТК Гранд</address>
+                                <a href=''>Смотреть на карте</a>
+                            </div>
+                            <div class='contacts__wa'>
+                                <a href='https://wa.me/your_channel' target='_blank' rel='noopener noreferrer'
+                                    aria-label='WatsApp'>
+                                    <img src='icons/wa.svg' alt='Иконка ватсапа' />
+                                </a>
+                            </div>
+                        </article>
+                    </div>
                 </section>
             </div>
         </main>
         <footer class="footer">
-            {{> footer}}
+            <div class='footer__container'>
+                <div class='footer__body body-footer'>
+                    <div class='body-footer__row'>
+                        <div class='body-footer__item item-footer'>
+                            <h3 class='item-footer__title'><a href='' class='item-footer__title'>Портфолио</a></h3>
+                            <nav class='menu-footer'>
+                                <ul class='menu-footer__list'>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Шкафа</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Гардеробные</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Кухни</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Гостиные</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Мебель для ванной</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Детские</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class='body-footer__item item-footer'>
+                            <h3 class='item-footer__title'><a href='' class='item-footer__title'>Заказчикам</a></h3>
+                            <nav class='menu-footer'>
+                                <ul class='menu-footer__list'>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>галереии</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>акции</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>материалы и декор</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>наш сервис</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>гарантия</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>декор</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class='body-footer__item item-footer'>
+                            <h3 class='item-footer__title'><a href='' class='item-footer__title'>Компания</a></h3>
+                            <nav class='menu-footer'>
+                                <ul class='menu-footer__list'>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>О компании</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Отзывы</a>
+                                    </li>
+                                    <li class='menu-footer__item'>
+                                        <a href='' class='menu-footer__link font-manrope'>Контакты</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class='body-footer__item item-footer item-footer_socials'>
+                            <h3 class='item-footer__title'><a href='' class='item-footer__title'>Сотрудничество</a></h3>
+                            <nav class='menu-footer menu-footer_socials'>
+                                <ul class='menu-footer__list menu-footer__list_socials'>
+                                    <li class='menu-footer__item menu-footer__item_socials'>
+                                        <a class='menu-footer__link font-manrope'
+                                            href='mailto:infofabric.st@gmail.com'>infofabric.st@gmail.com</a>
+                                        <div class='socials'>
+                                            <div class='socials__icon'>
+                                                <a href='https://t.me/your_channel' target='_blank'
+                                                    rel='noopener noreferrer' aria-label='Телеграм канал'>
+                                                    <img src='icons/tg.svg' alt='Иконка телеграма' /></a>
+                                            </div>
+                                            <div class='socials__icon'>
+                                                <a href='https://vk/your_channel' target='_blank'
+                                                    rel='noopener noreferrer' aria-label='Канал во вконтакте'>
+                                                    <img src='icons/vk.svg' alt='Иконка вк' /></a>
+                                            </div>
+                                            <div class='socials__icon'>
+                                                <a href='https://www.instagram.com/yourusername' target='_blank'
+                                                    rel='noopener noreferrer' aria-label='Страница инстаграмм'>
+                                                    <img src='icons/inst.svg' alt='Иконка инстаграмм' /></a>
+                                            </div>
+                                            <div class='socials__icon'>
+                                                <a href='https://wa.me/1234567890' target='_blank'
+                                                    rel='noopener noreferrer' aria-label='Ватсап канал канал'>
+                                                    <img src='icons/wa.svg' alt='Икона WatsApp' /></a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class='footer__bottom bottom-footer'>
+                    <p class='bottom-footer__copyright font-manrope'><small>© FaБRИК — 2024</small></p>
+                    <div class='bottom-footer__logo'>
+                        <a href='/' aria-label='На главную'>
+                            <img src='icons/logo.svg' alt='Логотип' />
+                        </a>
+                    </div>
+                    <div class='bottom-footer__politics font-manrope'>
+                        <a href='/privacy-policy' aria-label='Политика конфиденциальности'>Политика
+                            конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
 
     </div>
-    <script type='module' src='main.js'></script>
+    <script type="module" src="/assets/main.BfZTtxKw.js"></script>
 </body>
 
 </html>
