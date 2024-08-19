@@ -1,0 +1,45 @@
+.portfolio-page {
+    .projects__title {
+        display: none;
+    }
+}
+
+.portfolio-filter {
+}
+.fliter {
+}
+
+.filter {
+    @include responsive-clamp(margin-bottom, 60px, 120px);
+    // .filter__item
+
+    &__item {
+        padding: 12px 24px;
+        font-size: 12px;
+        border: 1px solid rgb(255, 255, 255, 0.2);
+        border-radius: 80px;
+        text-transform: uppercase;
+        line-height: 12px;
+        transition: background-color 0.5s ease, color 0.5s ease; /* Плавное изменение цвета */
+
+        cursor: pointer;
+    }
+    &__item.active {
+        color: #000;
+        background-color: #fff;
+    }
+}
+
+
+.filter-swiper-wrapper {
+    justify-content: center;
+    @media (max-width: 768px) {
+        justify-content: flex-start;
+    }
+}
+
+/* Общие стили для слайдов */
+.filter-swiper-slide {
+    width: auto !important; /* Автоматическая ширина по содержимому */
+    display: inline-flex; /* Или inline-block для правильного отображения */
+}

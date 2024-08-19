@@ -1,0 +1,84 @@
+@use 'sass:math';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300,400,500,600,700,800&display=swap');
+// import Swiper JS
+$min-width: 450px;
+$max-width: 1880px;
+$viewport-width: 100vw; // текущая ширина экрана
+
+section {
+    border: 1px solid red;
+}
+
+@function responsive-value($min, $max) {
+    $viewport-width: 100vw; // Используем как viewport, но не в calc
+    $value-range: math.div($max - $min, $max-width - $min-width);
+    $calculated-value: calc(#{$min} + #{$value-range} * (100vw - #{$min-width}));
+    @return $calculated-value;
+}
+
+// Миксин для применения clamp
+@mixin responsive-clamp($property, $min, $max) {
+    $clamped-value: responsive-value($min, $max);
+    #{$property}: clamp(#{$min}, #{$clamped-value}, #{$max});
+}
+@font-face {
+    font-family: 'Brewery';
+    src: url('/fonts/Brewery No2 CYR W10 Regular.woff2') format('woff2'),
+        url('/fonts/Brewery No2 CYR W10 Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='__container'] {
+    max-width: 1880px;
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    margin: 0 auto;
+    @media (max-width: 768px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@import 'base/null.scss';
+@import 'common.scss';
+@import 'header.scss';
+@import 'main-block.scss';
+@import 'about-us.scss';
+@import 'statistics.scss';
+@import 'our-team.scss';
+@import 'advantages.scss';
+@import 'material-categories.scss';
+@import 'projects.scss';
+@import 'for-designers.scss';
+@import 'gallery.scss';
+@import 'feedback.scss';
+@import 'form.scss';
+@import 'contacts.scss';
+@import 'footer.scss';
+@import 'pages/portfolio/main-block.scss';
+@import 'pages/portfolio/projects.scss';
+@import 'pages/project/project-main-block.scss';
+@import 'pages/project/image.scss';
+@import 'pages/project/about-project.scss';
+@import 'pages/project/project-swiper.scss';
+@import 'pages/for-designers/main-block.scss';
+@import 'pages/for-designers/advantages.scss';
+@import 'pages/for-designers/stages.scss';
+@import 'pages/about-page/main-block.scss';
+@import 'pages/about-page/about-page-advantages.scss';
+@import 'pages/about-page/about-page-statistics.scss';
+@import 'pages/service/service-main-block.scss';
+@import 'pages/service/service-advantages.scss';
+@import 'pages/feedback-and-guarantees/main-block.scss';
+@import 'pages/feedback-and-guarantees/guarantee-block.scss';
+@import 'pages/feedback-and-guarantees/feedback-block.scss';
+@import 'pages/feedback/main-block.scss';
+@import 'pages/feedback/feedback.scss';
+@import 'pages/feedback/footer.scss';
+@import 'pages/3d-project/main-block.scss';
+@import 'pages/3d-project/about.scss';
+@import 'pages/3d-project/form.scss';
+@import 'pages/contacts/main-block.scss';

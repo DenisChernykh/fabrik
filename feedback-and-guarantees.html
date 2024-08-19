@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Отзывы и гарантии</title>
+
+
+</head>
+
+<body>
+	<header class="header-main-block">
+		{{> header}}
+	</header>
+	<main class="feedback-and-guarantees-page">
+
+		<section class="main-block">
+			{{>feedback-and-guarantees/main-block}}
+		</section>
+		<div class="page__container">
+			<section class="guarantee-block">
+				{{>feedback-and-guarantees/guarantee-block}}
+			</section>
+			<section class="feedback-block">
+				{{>feedback-and-guarantees/feedback-block}}
+			</section>
+
+		</div>
+	</main>
+	<footer>{{> footer}}</footer>
+	<script type='module' src='/main.js'></script>
+</body>
+
+</html>

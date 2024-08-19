@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+	<meta charset='UTF-8' />
+	<link rel='icon' type='image/svg+xml' href='/vite.svg' />
+
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<title>3D проект</title>
+</head>
+
+<body>
+
+	<header class="header-portfolio">{{> header}}</header>
+	<main class='contacts-page'>
+		<section class='main-block'>
+			{{> contacts/main-block}}
+		</section>
+		<div class="contacts__container">
+			<section class='map'>
+				{{> contacts/map}}
+			</section>
+			<section class="contacts">
+				{{> contacts}}
+			</section>
+			<section class="form">
+				{{> form}}
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		{{> footer}}
+	</footer>
+
+
+	<script type='module' src='/main.js'></script>
+</body>
+
+</html>

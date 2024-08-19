@@ -1,0 +1,191 @@
+.footer {
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+    }
+}
+.body-footer {
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media (max-width: 768px) {
+        padding-top: 0;
+    }
+    // .body-footer__row
+
+    &__row {
+        justify-content: space-between;
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        @media (max-width: 768px) {
+            row-gap: 30px;
+        }
+    }
+
+    // .body-footer__item
+
+    &__item {
+        flex: 1 1 calc(25% - 16px); /* Колонки занимают 25% от ширины контейнера минус пространство между колонками */
+        @media (max-width: 768px) {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-direction: column;
+
+            flex: 1 1 calc(50% - 16px); /* Колонки занимают 50% от ширины контейнера минус пространство между колонками */
+        }
+        @media (max-width: 500px) {
+            flex: 1 1 100%; /* Колонки занимают 100% от ширины контейнера */
+        }
+    }
+}
+.item-footer {
+    &_socials {
+        display: flex;
+        flex-direction: column;
+    }
+    // .item-footer__title
+
+    &__title {
+        margin-bottom: 40px;
+        display: block;
+        font-size: 20px;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+.menu-footer {
+    &_socials {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    // .menu-footer__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        &_socials {
+            flex-grow: 1;
+        }
+    }
+
+    // .menu-footer__item
+
+    &__item {
+        line-height: math.div(12px, 12px);
+        text-transform: uppercase;
+        font-size: 12px;
+        &_socials {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+
+    // .menu-footer__link
+
+    &__link {
+        line-height: math.div(16px, 12px);
+
+        opacity: 0.5;
+    }
+}
+.bottom-footer {
+}
+
+.socials {
+    display: flex;
+    margin-top: auto;
+    gap: 10px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+
+    // .socials__icon
+
+    &__icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.footer {
+    // .footer__bottom
+
+    &__bottom {
+    }
+}
+.bottom-footer {
+    padding-top: clamp(20px, 4.3vw, 80px);
+    @include responsive-clamp(padding-top, 20px, 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    // .bottom-footer__copyright
+
+    &__copyright {
+        opacity: 0.4;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    // .bottom-footer__logo
+
+    &__logo {
+        height: 40px;
+        img {
+            height: 100%;
+        }
+        @media (max-width: 768px) {
+            order: -1;
+            margin-bottom: 20px;
+        }
+    }
+
+    // .bottom-footer__politics
+
+    &__politics {
+        opacity: 0.04em;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 4%;
+        text-align: right;
+        text-transform: uppercase;
+    }
+}

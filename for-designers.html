@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Для дизайнеров и архитекторов</title>
+
+</head>
+
+<body>
+	<header class="header-main-block">
+		{{> header}}
+	</header>
+	<main class="for-designers-page">
+		<section class="main-block">
+			{{> for-designers/main-block }}
+		</section>
+		<section class="advantages">
+			{{> for-designers/advantages }}
+		</section>
+		<section class="stages">
+			{{> for-designers/stages }}
+
+		</section>
+	</main>
+	<footer>{{> footer}}</footer>
+
+	<script type='module' src='/main.js'></script>
+</body>
+
+</html>

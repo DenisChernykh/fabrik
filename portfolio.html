@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset='UTF-8' />
+	<link rel='icon' type='image/svg+xml' href='/vite.svg' />
+
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<title>Портфолио</title>
+</head>
+
+<body>
+	<div class="portfolio__container">
+		<header class="header-portfolio">{{> header}}</header>
+		<main class="portfolio-page">
+			<section class="main-block">
+				{{> portfolio/main-block}}
+			</section>
+			<section class="portfolio-projects projects">
+				{{> portfolio/projects}}
+			</section>
+		</main>
+	</div>
+	<footer class="footer">
+		{{> footer}}
+
+	</footer>
+
+
+	<script type='module' src='/main.js'></script>
+</body>
+
+</html>

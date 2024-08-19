@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+    <meta charset='UTF-8' />
+    <link rel='icon' type='image/svg+xml' href='/vite.svg' />
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>FABRИК</title>
+</head>
+
+<body>
+    <div id='app'>
+        <header class='header-main-block'>
+            {{> header}}
+
+        </header>
+        <main class='main-page'>
+            <section class='main-block'>
+                {{> main-block}}
+            </section>
+            <div class="main-page__container">
+                <section id="about-us" class="about-us">
+                    {{> about-us}}
+                </section>
+                <section class="statistics">
+                    {{> statistics}}
+                </section>
+                <section class="our-team">
+                    {{> our-team}}
+                </section>
+                <section class="advantages">
+                    {{> advantages}}
+                </section>
+                <section class="material-categories">
+                    {{> material-categories}}
+                </section>
+                <section class="projects">
+                    {{> projects}}
+                </section>
+                <section class="for-designers">
+                    {{> for-designers}}
+                </section>
+                <section class="gallery">
+                    {{> gallery title='смотреть все'}}
+                </section>
+                <section class="feedback">
+                    {{> feedback}}
+                </section>
+                <section class="form">
+                    {{> form}}
+                </section>
+                <section class="contacts">
+                    {{> contacts}}
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            {{> footer}}
+        </footer>
+
+    </div>
+    <script type='module' src='/main.js'></script>
+</body>
+
+</html>

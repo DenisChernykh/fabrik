@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ru'>
+
+<head>
+	<meta charset='UTF-8' />
+	<link rel='icon' type='image/svg+xml' href='/vite.svg' />
+
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<title>3D проект</title>
+</head>
+
+<body>
+
+	<header class='header-main-block'>
+		{{> header}}
+
+	</header>
+	<main class='project-3d-page'>
+		<section class='main-block'>
+			{{> 3d-project/main-block}}
+		</section>
+		<div class="project-3d__container">
+			<section class='about'>
+				{{> 3d-project/about}}
+			</section>
+			<section class='form'>
+				{{> 3d-project/form}}
+			</section>
+		</div>
+	</main>
+	<footer class="footer">
+		{{> footer}}
+	</footer>
+
+
+	<script type='module' src='/main.js'></script>
+</body>
+
+</html>

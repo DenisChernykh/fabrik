@@ -1,0 +1,16 @@
+{
+    "folders": [
+        {
+            "path": "../../../../../projects/fls-projects/zlatmax"
+        },
+        {
+            "path": "../.."
+        },
+        {
+            "path": "../../../../../Start-template/HTML+CSS+JS"
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "HTML+CSS+JS"
+    }
+}

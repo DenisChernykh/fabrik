@@ -1,0 +1,161 @@
+.feedback-page {
+    .guarantee-block {
+        @include responsive-clamp(margin-bottom, 60px, 175px);
+        // .guarantee-block__row
+
+        &__row {
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 768px) {
+                display: grid;
+            }
+        }
+
+        // .guarantee-block__item
+
+        &__item {
+            &--images {
+                flex-basis: percentage($number: 795/1840);
+                @media (max-width: 768px) {
+                    order: 2;
+                }
+            }
+            &--list {
+                flex-basis: percentage($number: 910/1840);
+                @media (max-width: 768px) {
+                    order: 1;
+                }
+            }
+            .font-manrope {
+            }
+            .circle {
+                border-color: rgb(255, 255, 255, 0.2);
+            }
+            .title-hidden {
+                @media (max-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+        // .guarantee-block__title
+
+        &__title {
+            text-transform: uppercase;
+            @include responsive-clamp(margin-bottom, 20px, 64px);
+        }
+
+        // .guarantee-block__images-block
+
+        &__exclusions {
+            padding: 74.5px 83px 74.5px 60px;
+            @include responsive-clamp(font-size, 20px, 30px);
+            @include responsive-clamp(line-height, 30px, 45px);
+            background-color: rgb(255, 255, 255, 0.1);
+            border-radius: 20px;
+            text-transform: uppercase;
+            @media (max-width: 768px) {
+                margin-top: 40px;
+                padding: 25.5px 11px 25.5px 20px;
+            }
+        }
+    }
+
+    .images-block {
+        position: relative;
+        width: percentage($number: 755/795);
+        aspect-ratio: 755 / 602;
+        @include responsive-clamp(margin-bottom, 42px, 64px);
+
+        &__image-1,
+        &__image-2,
+        &__image-3 {
+            position: absolute;
+
+            img {
+                width: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        &__image-1,
+        &__image-2 {
+            top: 0;
+        }
+
+        &__image-2,
+        &__image-3 {
+            right: 0;
+        }
+        &__image-1 {
+            width: percentage($number: 445/755);
+        }
+        &__image-2 {
+            width: percentage($number: 270/755);
+        }
+        &__image-3 {
+            bottom: 0;
+            width: percentage($number: 445/755);
+        }
+    }
+
+    .list-block {
+        .mobile {
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+        .pk {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+        flex-basis: percentage($number: 910/1840);
+        @media (max-width: 768px) {
+            order: 1;
+        }
+        // .list-block__list
+
+        &__list {
+        }
+
+        // .list-block__item
+
+        &__item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            column-gap: 20px;
+            row-gap: 23px;
+            padding: 20px 0;
+            border-top: 1px solid rgb(255, 255, 255, 0.1);
+            &:last-child {
+                border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+            }
+        }
+
+        // .list-block__item-number
+
+        &__item-number {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0.04em;
+        }
+
+        // .list-block__title
+
+        &__title {
+            align-self: center;
+            grid-column: 2;
+            @include responsive-clamp(font-size, 16px, 20px);
+            @include responsive-clamp(line-height, 16px, 25px);
+        }
+        &__text {
+            grid-column: 2;
+            grid-row: 2;
+            @include responsive-clamp(font-size, 14px, 16px);
+            line-height: 24px;
+            color: rgb(255, 255, 255, 0.8);
+        }
+    }
+}
