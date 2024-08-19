@@ -1,0 +1,51 @@
+.material-categories {
+    // .material-categories__row
+    @include responsive-clamp(margin-bottom, 120px, 140px);
+
+    &__row {
+        display: flex;
+        column-gap: 20px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    // .material-categories__item
+
+    &__item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 40px;
+        border: 1px solid transparent; /* Сначала делаем границу прозрачной */
+        border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 0, rgba(255, 255, 255, 0) 100%) 1;
+    }
+
+    // .material-categories__title
+
+    &__title {
+        @include responsive-clamp(font-size, 30px, 50px);
+        @include responsive-clamp(line-height, 40px, 50px);
+        @include responsive-clamp(margin-bottom, 20px, 40px);
+    }
+
+    // .material-categories__image
+
+    &__image {
+        margin-bottom: 40px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    // .material-categories__text
+
+    &__text {
+        text-align: center;
+        &.font-manrope {
+            font-size: 14px;
+            @include responsive-clamp(line-height, 24px, 28px);
+            color: rgba($color: #fff, $alpha: 0.8);
+        }
+    }
+}

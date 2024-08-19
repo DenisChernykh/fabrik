@@ -1,0 +1,45 @@
+.project-3d-page {
+    .form {
+        // .form__container
+
+        &__container {
+            padding-bottom: 54px;
+        }
+
+        // .form__title
+
+        &__title {
+        }
+
+        // .form__title-container
+
+        &__title-container {
+        }
+    }
+    .section-title {
+    }
+    .choose-form {
+        // .choose-form__title
+
+        &__title {
+        }
+
+        // .choose-form__grid
+
+        &__grid {
+            display: flex;
+        }
+
+        // .choose-form__item
+
+        &__item {
+            flex: 1;
+            input::placeholder {
+                color: #333;
+            }
+        }
+    }
+    .form-next {
+        flex: 1;
+    }
+}

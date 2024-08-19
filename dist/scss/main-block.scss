@@ -1,0 +1,89 @@
+.main-page {
+    .main-block {
+        // .main-block__container
+
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0) 24.63%),
+            linear-gradient(180deg, rgba(0, 0, 0, 0.3), rgb(0, 0, 0) 100%),
+            rgb(0, 0, 0)
+                image-set(
+                    url('/images/main/bg-main.jpg') 1x,
+                    url('/images/main/bg-main@2x.jpg') 2x,
+                    url('/images/main/bg-main@3x.jpg') 3x
+                );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        &__container {
+        }
+
+        // .main-block__title
+
+        &__title {
+        }
+
+        // .main-block__arrow
+
+        &__arrow {
+        }
+    }
+}
+
+.main-block {
+    // .main-block__container
+
+    &__container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    // .main-block__title
+
+    &__title {
+        margin-bottom: 0;
+    }
+
+    // .main-block__arrow
+
+    &__arrow {
+        height: 52px;
+    }
+    &__subtitle {
+        font-size: 14px;
+        line-height: 28px;
+        opacity: 0.5;
+    }
+    &__text {
+        @include responsive-clamp(font-size, 35px, 50px);
+        @include responsive-clamp(line-height, 45px, 50px);
+    }
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        @include responsive-clamp(margin-bottom, 40px, 120px);
+
+        align-items: center;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__text-right-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+.main-block__container:has(.main-block__arrow) {
+    @include responsive-clamp(padding-bottom, 20px, 120px);
+}
+.main-block__container:has(.main-block__arrow) .main-block__title {
+    @include responsive-clamp(margin-bottom, 23px, 60px);
+}

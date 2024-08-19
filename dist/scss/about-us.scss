@@ -1,0 +1,86 @@
+.about-us {
+    @include responsive-clamp(padding-top, 40px, 120px); // .about-us__container
+    @include responsive-clamp(margin-bottom, 40px, 120px); // .about-us__container
+
+    &__container {
+    }
+
+    // .about-us__row
+
+    &__row {
+        display: flex;
+        column-gap: 10px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+
+    // .about-us__item
+
+    &__item {
+        flex: 1;
+    }
+
+    // .about-us__text
+
+    &__text {
+    }
+
+    // .about-us__years
+
+    &__years {
+    }
+}
+.years-about-us {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    // .years-about-us__number
+
+    &__number {
+        @include responsive-clamp(font-size, 112px, 280px);
+        @include responsive-clamp(line-height, 112px, 280px);
+        grid-row: 1/3;
+        @media (max-width: 768px) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+    }
+
+    // .years-about-us__text-content
+
+    &__text-content {
+        grid-column: 2;
+        grid-row: 2;
+        @media (max-width: 768px) {
+            grid-column: 1/3;
+            grid-row: 2;
+        }
+    }
+
+    //.years-about-us__title
+    &__title-container {
+        @media (min-width: 768px) {
+            margin-bottom: 23px;
+        }
+        @media (max-width: 768px) {
+            grid-row: 1;
+            grid-column: 2;
+            align-self: end;
+        }
+    }
+    &__title {
+    }
+
+    // .years-about-us__text
+
+    &__text {
+        &.gray-text {
+            @include responsive-clamp(font-size, 14px, 16px);
+            @include responsive-clamp(line-height, 22px, 28px);
+            color: rgba($color: #fff, $alpha: 0.5);
+            text-transform: uppercase;
+        }
+    }
+}
