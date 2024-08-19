@@ -1,5 +1,4 @@
 @use 'sass:math';
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300,400,500,600,700,800&display=swap');
 // import Swiper JS
 $min-width: 450px;
 $max-width: 1880px;
@@ -26,6 +25,46 @@ section {
     src: url('/fonts/Brewery No2 CYR W10 Regular.woff2') format('woff2'),
         url('/fonts/Brewery No2 CYR W10 Regular.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-Regular.woff2') format('woff2'),
+         url('/fonts/Manrope-Regular.woff') format('woff');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-Medium.woff2') format('woff2'),
+         url('/fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-SemiBold.woff2') format('woff2'),
+         url('/fonts/Manrope-SemiBold.woff') format('woff');
+    font-weight: 600; /* Semi Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-Bold.woff2') format('woff2'),
+         url('/fonts/Manrope-Bold.woff') format('woff');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-ExtraBold.woff2') format('woff2'),
+         url('/fonts/Manrope-ExtraBold.woff') format('woff');
+    font-weight: 800; /* Extra Bold */
     font-style: normal;
 }
 
