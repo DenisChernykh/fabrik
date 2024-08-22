@@ -9,21 +9,22 @@
 </head>
 
 <body>
-	<header class="header-main-block">
+	<header class="header">
 		{{> header}}
 	</header>
-	<main class="for-designers-page">
-		<section class="main-block">
-			{{> for-designers/main-block }}
-		</section>
-		<section class="advantages">
-			{{> for-designers/advantages }}
-		</section>
-		<section class="stages">
-			{{> for-designers/stages }}
-
-		</section>
-	</main>
+	<div class="for-designer-page__container">
+		<main class="for-designers-page">
+			<section class="main-block">
+				{{> for-designers/main-block }}
+			</section>
+			<section id="for-designers-advantages" class="advantages">
+				{{> for-designers/advantages }}
+			</section>
+			<section class="stages">
+				{{> for-designers/stages }}
+			</section>
+		</main>
+	</div>
 	<footer>{{> footer}}</footer>
 
 	<script type='module' src='/main.js'></script>

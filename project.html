@@ -10,22 +10,24 @@
 
 <body>
 	<div id='app'>
-		<header class="header">
+		<header class="header header-static">
 			{{>header}}
 		</header>
-		<main class='page'>
-			<section class="project-main-block">
-				{{> project/main-block}}
-			</section>
-			<section class="image">
-				{{>project/image}}
-			</section>
-			<section class="about-project">
-				{{>project/about}}
-			</section>
-			<section class="project-swiper">
-				{{>project/swiper}}
-			</section>
+		<main class='project-page'>
+			<div class="project-page__container">
+				<section class="main-block">
+					{{> project/main-block}}
+				</section>
+				<section class="image">
+					{{>project/image}}
+				</section>
+				<section class="about">
+					{{>project/about}}
+				</section>
+				<section class="swiper">
+					{{>project/swiper}}
+				</section>
+			</div>
 		</main>
 		<footer class="footer">
 			{{> footer}}

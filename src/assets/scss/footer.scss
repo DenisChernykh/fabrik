@@ -137,6 +137,7 @@
 }
 
 .footer {
+    @include responsive-clamp(padding-bottom, 20px, 80px);
     // .footer__bottom
 
     &__bottom {
@@ -161,13 +162,19 @@
         letter-spacing: 0.04em;
         text-align: left;
         text-transform: uppercase;
-        margin-bottom: 20px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px;
+        }
     }
 
     // .bottom-footer__logo
 
     &__logo {
-        height: 40px;
+        
+        a {
+            display: flex;
+        }
         img {
             height: 100%;
         }
@@ -187,5 +194,6 @@
         letter-spacing: 4%;
         text-align: right;
         text-transform: uppercase;
+        opacity: 0.5;
     }
 }

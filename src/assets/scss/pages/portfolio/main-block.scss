@@ -1,13 +1,3 @@
-.portfolio-page {
-    .projects__title {
-        display: none;
-    }
-}
-
-.portfolio-filter {
-}
-.fliter {
-}
 
 .filter {
     @include responsive-clamp(margin-bottom, 60px, 120px);

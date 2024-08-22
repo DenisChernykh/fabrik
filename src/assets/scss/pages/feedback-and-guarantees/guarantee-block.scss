@@ -1,4 +1,4 @@
-.feedback-page {
+
     .guarantee-block {
         @include responsive-clamp(margin-bottom, 60px, 175px);
         // .guarantee-block__row
@@ -158,4 +158,3 @@
             color: rgb(255, 255, 255, 0.8);
         }
     }
-}

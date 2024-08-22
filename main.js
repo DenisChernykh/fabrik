@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Инициализируем Swiper для контейнера team
             if (!swipers.team) {
                 swipers.team = new Swiper('.swiper__team-photo', {
-                    slidesPerView: 1.2,
+                    slidesPerView: 2.5,
                     spaceBetween: 10,
                     loop: true,
                     speed: 400,

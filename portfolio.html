@@ -10,16 +10,18 @@
 </head>
 
 <body>
-	<div class="portfolio__container">
-		<header class="header-portfolio">{{> header}}</header>
-		<main class="portfolio-page">
-			<section class="main-block">
-				{{> portfolio/main-block}}
-			</section>
-			<section class="portfolio-projects projects">
-				{{> portfolio/projects}}
-			</section>
-		</main>
+
+	<header class=" header header-static">
+		{{> header}}</header>
+	<main class="portfolio-page">
+		<div class="portfolio__container">
+		<section class="main-block">
+			{{> portfolio/main-block}}
+		</section>
+		<section class="portfolio-projects projects">
+			{{> portfolio/projects}}
+		</section>
+	</main>
 	</div>
 	<footer class="footer">
 		{{> footer}}

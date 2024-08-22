@@ -1,11 +1,14 @@
 .image {
     // .image__container
     @include responsive-clamp(margin-bottom, 20px, 140px);
-    &__container {
-    }
 
     &__image {
-        background: url('images/project/bg.jpg');
+        background: image-set(
+            url('images/project/bg.jpg'),
+            url('images/project/bg@2x.jpg 2x'),
+            url('images/project/bg@3x.jpg 3x')
+        );
+
         max-width: 1840px;
         aspect-ratio: calc(1840 / 1200);
         border-radius: 44px;
