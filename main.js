@@ -406,49 +406,73 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const MAX_LENGTH = 150;
 
-    function truncateText(element, maxLength) {
-        const text = element.textContent;
-        if (text.length > maxLength) {
-            const truncated = text.slice(0, maxLength) + '...';
-            const fullText = text;
+   function truncateText(element, maxLength) {
+       let text = element.textContent;
 
-            element.textContent = truncated;
+       // Если текст длиннее максимальной длины
+       if (text.length > maxLength) {
+           const truncated = text.slice(0, maxLength);
+           const fullText = text;
 
-            const moreTextSpan = document.createElement('span');
-            moreTextSpan.classList.add('feedback-swiper-slide__text');
-            moreTextSpan.style.display = 'none';
-            moreTextSpan.textContent = fullText;
+           // Очищаем исходный элемент
+           element.textContent = '';
 
-            element.appendChild(moreTextSpan);
+           // Создаем span для обрезанного текста
+           const truncatedSpan = document.createElement('span');
+           truncatedSpan.classList.add('truncated-text');
+           truncatedSpan.textContent = truncated;
 
-            return moreTextSpan;
-        }
+           // Создаем span для "..."
+           const ellipsisSpan = document.createElement('span');
+           ellipsisSpan.textContent = '...';
 
-        return null;
-    }
+           // Создаем span для полного текста
+           const moreTextSpan = document.createElement('span');
+           moreTextSpan.classList.add('feedback-swiper-slide__text');
+           moreTextSpan.style.display = 'none';
+           moreTextSpan.textContent = fullText;
 
-    function toggleTextVisibility(button, moreTextSpan, swiperContainer) {
-        button.addEventListener('click', () => {
-            if (moreTextSpan.style.display === 'none') {
-                moreTextSpan.style.display = 'inline';
-                button.textContent = 'Скрыть';
+           // Добавляем все элементы в элемент p
+           element.appendChild(truncatedSpan);
+           element.appendChild(ellipsisSpan);
+           element.appendChild(moreTextSpan);
 
-                // Изменяем высоту контейнера на основании полной высоты содержимого
-                swiperContainer.style.height = swiperContainer.scrollHeight + 'px';
-            } else {
-                moreTextSpan.style.display = 'none';
-                button.textContent = 'Читать полностью';
+           return {
+               truncatedSpan,
+               ellipsisSpan,
+               moreTextSpan,
+           };
+       }
 
-                // Устанавливаем высоту контейнера в auto, чтобы он корректно адаптировался
-                swiperContainer.style.height = '';
-            }
+       return null;
+   }
 
-            // Обновление Swiper для правильной работы высоты
-            if (swiperContainer.swiper) {
-                swiperContainer.swiper.update();
-            }
-        });
-    }
+
+   function toggleTextVisibility(button, spans, swiperContainer) {
+       button.addEventListener('click', () => {
+           const { truncatedSpan, ellipsisSpan, moreTextSpan } = spans;
+
+           if (moreTextSpan.style.display === 'none') {
+               // Показываем полный текст, скрываем обрезанный и "..."
+               truncatedSpan.style.display = 'none';
+               ellipsisSpan.style.display = 'none';
+               moreTextSpan.style.display = 'inline';
+               button.textContent = 'Скрыть';
+           } else {
+               // Показываем обрезанный текст и "...", скрываем полный
+               truncatedSpan.style.display = 'inline';
+               ellipsisSpan.style.display = 'inline';
+               moreTextSpan.style.display = 'none';
+               button.textContent = 'Читать полностью';
+           }
+
+           // Обновляем Swiper (если есть)
+           if (swiperContainer.swiper) {
+               swiperContainer.swiper.update();
+           }
+       });
+   }
+
 
     document.querySelectorAll('.swiper-slide').forEach((slide) => {
         const textElement = slide.querySelector('.feedback-swiper-slide__text');
@@ -475,14 +499,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         scrollLinks.forEach((link) => {
             link.addEventListener('click', function (event) {
-                event.preventDefault(); // Отменяем стандартное действие ссылки
+                event.preventDefault();
 
-                // Получаем значение атрибута data-target
                 const targetSelector = this.getAttribute('data-target');
                 const targetElement = document.querySelector(targetSelector);
 
                 if (targetElement) {
-                    // Прокручиваем страницу к элементу
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 } else {
                     console.error('Не найден элемент с селектором:', targetSelector);
